@@ -50,7 +50,12 @@
     let button = document.getElementById('clicker')
     function start() {
         let num = Math.floor(Math.random () * 11)
-        if (guessedNo.value == num) {
+        if (guessedNo.value > 10) {
+            statement.innerHTML = `${'Bro' } ${guessedNo.value} ${'is greater than 10'}`
+        }else if (guessedNo.value < 0){
+            statement.innerHTML = `${'Bro' } ${guessedNo.value} ${'is less than 0'}`
+        }
+        else if (guessedNo.value === num && guessedNo.value <11 && guessedNo.value > 0 ) {
             statement.innerHTML = `${'the guessed no is' } ${num} ${'nice job bro'}`
         }else {
             statement.innerHTML = `${'the guessed no is' } ${num} ${'U are wrong bro'}`
