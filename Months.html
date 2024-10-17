@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            p {
+                height: 20vh;
+                width: 30%;
+                background-color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;
+                border-radius: 10px 10px 0 0;
+                color: #fff;
+            }
+            #div {
+                height: 30vh;
+                width: 30%;
+                background-color: aqua;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                border-radius: 0 0 10px 10px;
+            }
+            input {
+                width: 80%;
+                height: 40px;
+                font-size: 24px;
+                border: 0 #fff;
+                border-radius: 10px;
+                outline: 0;
+                padding-left: 15px;
+                transition: 0.5s all linear;
+            }
+            input:hover {
+                border: 1px solid blue;
+            }
+            input:focus {
+                border: 1px solid blue;
+            }
+            button {
+                width: 40%;
+                height: 40px;
+                border-radius: 10px;
+                border: 0;
+                font-size: 20px;
+                color: #fff;
+                background-color: #ff4c4c;
+                transition: 0.5s all linear;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: rgb(211, 0, 0);
+                border: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="screen">Input a Month</p>
+        <div id="div">
+            <input type="text" id="input">
+            <button id="button" onclick="check()">Click</button>
+        </div>
+    </body>
+    <script>
+        let screen = document.getElementById('screen')
+        function check() {
+            let input = document.querySelector('#input').value.trim().toLowerCase()
+            if (input === 'january') {
+                screen.innerHTML = "January has 31days"
+            }else if (input === 'march') {
+                screen.innerHTML = "March has 31days"
+            }else if (input === 'february') {
+                screen.innerHTML = "February has 28days"
+            }else if (input === 'april') {
+                screen.innerHTML = "April has 30days"
+            }else if (input === 'may') {
+                screen.innerHTML = "May has 31days"
+            }else if (input === 'june') {
+                screen.innerHTML = "June has 30days"
+            }else if (input === 'july') {
+                screen.innerHTML = "July has 31days"
+            }else if (input === 'august') {
+                screen.innerHTML = "August has 31days"
+            }else if (input === 'september') {
+                screen.innerHTML = "September has 30days"
+            }else if (input === 'october') {
+                screen.innerHTML = "October has 31days"
+            }else if (input === 'november') {
+                screen.innerHTML = "November has 30days"
+            }else if (input === 'december') {
+                screen.innerHTML = "December has 31days"
+            }else {
+                screen.innerHTML = "Input a valid Month"
+            }
+            
+        }
+    </script>
+</html>
